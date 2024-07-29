@@ -5,16 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ShopOffer extends Model
+class Shop extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'shop_id', 'product', 'price', 'currency', 'description'
+        'name', 'address', 'country'
     ];
-
-    public function shop()
+    
+    public function offers()
     {
-        return $this->belongsTo(Shop::class, 'shop_id', 'id');
+        return $this->hasMany(ShopOffer::class, 'shop_id', 'id');
     }
 }

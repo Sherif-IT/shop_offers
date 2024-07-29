@@ -4,7 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use App\Singletons\OffersInitializer;
-
+use App\Singletons\ShopInitializer;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -22,5 +22,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         OffersInitializer::initOffers();
+        ShopInitializer::initShops();
     }
 }

@@ -22,10 +22,10 @@ class OfferController extends Controller
 
         $offers = ShopOffer::where('shop_id', $shopId)->get();
 
-        $offers->each(function ($offer) {
+        /*$offers->each(function ($offer) {
             $offer->price = $this->convertToEuro($offer->price, $offer->currency);
             $offer->currency = 'EUR';
-        });
+        });*/
 
         $sortOffers = $offers->sortBy('price');
 

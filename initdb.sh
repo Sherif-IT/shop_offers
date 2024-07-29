@@ -8,7 +8,7 @@ CHEMIN="$REPERTOIRE/$FICHIER"
 
 # Vérifica se SQLite3 é già installqto
 if ! command -v sqlite3 &> /dev/null; then
-  echo "Installation de SQLite3..."
+  echo "Installazione di SQLite3..."
   sudo apt install sqlite3
 else
   echo "SQLite3 é già installato."
